@@ -1,0 +1,11 @@
+docker build -t custom-prometheus . 
+\__-> Fazer build da image do prometheus baseado no Dockerfile 
+
+docker run -d --name prometheus -p 9090:9090 custom-prometheus 
+\__-> Subir o container do prometheus após fazer o build da image
+
+docker ps 
+\__-> Verificando o container se esta health
+
+docker exec -it prometheus sh 
+\__-> Entrar dentro do container.
